@@ -43,25 +43,36 @@ public class DibujoCartesianas {
         return new Color(0, 0, 0);
     }
 
-
     private static Color devuelveColor(double x, double y) {
-        if (x < 0.23) {
-            return new Color(5, 11, 198);
+        if (x < 0.40) {
+
+
+            if (y < 0.22 && y > 0.11) {
+                return new Color(198, 11, 30);
+            }
+            if (y < 0.44 && y > 0.33) {
+                return new Color(198, 11, 30); //rojo
+            }
+            if (y < 0.66 && y > 0.55) {
+                return new Color(198, 11, 30);
+            }
+            if (y < 0.88 && y > 0.77) {
+                return new Color(198, 11, 30);
+            }
+            return new Color(247, 244, 30);//amarillo
         }
 
-        if (y < 0.22 && y > 0.11) {
-            return new Color(198, 11, 30);
+        if (x > 0.40) {
+            if (y > 0 && y < 0.50) {
+                return new Color(198, 11, 30);
+            }
+            if (y < 0.44 && y > 0.33) {
+                return new Color(198, 11, 30); //rojo
+            }
+
+
         }
-        if (y < 0.44 && y > 0.33) {
-            return new Color(198, 11, 30);
-        }
-        if (y < 0.66 && y > 0.55) {
-            return new Color(198, 11, 30);
-        }
-        if (y < 0.88 && y > 0.77) {
-            return new Color(198, 11, 30);
-        }
-        return new Color(247, 244, 30);
+        return new Color(5, 11, 198); //azul
     }
 
 
